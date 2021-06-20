@@ -63,7 +63,15 @@ class像是昵称可以多个值 */
 /* Direct child selector */
 /* ">" 第一个孩子 */
 article>p {
+    /* 编写字体font */
     font-size: 24px;
+    font-weight: bold;
+    /* 行高 */
+    line-height:1.5;
+    /* 大写小写 */
+    text-transform: lowercase;
+    /* 向左向右 中间靠齐 */
+    text-align: center;
 }
 
 /* Adjacent sibling selector */
