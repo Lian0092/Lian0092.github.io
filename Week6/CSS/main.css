@@ -38,6 +38,7 @@ nav ul {
 nav ul a {
     color: rgb(5, 1, 56);
     text-decoration: none;
+    font-size: 1.5rem;
 }
 
 /* id和class 可以定义名字，可以加在主文件夹的任何标签<>内，
@@ -54,12 +55,19 @@ class像是昵称可以多个值 */
         center center
     */
     /* color image repeat position */
-    background: orange url(../images/bread.jpg) no-repeat center center ;
+    background: orange url(../images/bread.jpg) no-repeat center center;
     /* contain 包含整个图片，cover覆盖全部背景 */
     background-size: cover;
     color: white;
-    
 
+    font-size: 1.25rem;
+    /* 1.25 * 16 = 20px */
+    padding: 1em;
+    /* padding 可以将字体从边缘向中间推动 1 em 的距离 */
+    /* 1 * 20 =20px */
+    width: 100vw;
+    /* 这个width 可以让当前的keepfit的所有内容（背景最明显），跟页面的宽的100%一样大 */
+    /* vw 页面宽。 vh页面高，但用%还是更方便 */
 }
 
 /* selecting HTML elements with class name  。是class */
@@ -84,11 +92,18 @@ article>p {
     font-size: 24px;
     font-weight: bold;
     /* 行高 */
-    line-height:1.5;
+    line-height: 1.5;
     /* 大写小写 */
     text-transform: lowercase;
     /* 向左向右 中间靠齐 */
     text-align: center;
+    /* rem跟随html, em跟随font-size */
+    /* 
+        html = 20px
+        1rem = 20px
+        font-size: .1rem;  0.1*20=2px
+        1em = 2px
+    */
 }
 
 /* Adjacent sibling selector */
@@ -100,20 +115,20 @@ h3+ul {
 
 /* sibling selector */
 /* "~" 选择他后面的所有兄弟 */
-h3~p{
+h3~p {
     text-transform: uppercase;
 }
 
 /* attribute selector 属性选择器*/
 /* href后面跟网址 */
-[href="#keepfit"]{
+[href="#keepfit"] {
     font-weight: bold;
 }
 
 /* ^只有开头符合 */
 /* $只有结尾符合 */
-img[src$=".jpg"]{
-    border:4px solid red;
+img[src$=".jpg"] {
+    border: 4px solid red;
 }
 
 /* using pseudo classes */
@@ -124,7 +139,7 @@ img[src$=".jpg"]{
 /* a:visited 是是否访问过的状态 */
 nav ul a,
 nav ul a:link,
-nav ul a:visited{
+nav ul a:visited {
     background-color: orange;
     /* 水平方向左到右，垂直方向上到下，模糊，传播，颜色*/
     box-shadow: -2px 2px 6px 2px black;
@@ -134,29 +149,30 @@ nav ul a:visited{
 nav ul .current,
 nav ul a:hover,
 nav ul a:focus {
-    background-color:  black;
+    background-color: black;
     color: white;
     text-decoration: underline;
 }
+
 /* 添加点击时的状态 */
-nav ul a:active{
+nav ul a:active {
     box-shadow: 0 0 6px 2px black;
 }
 
 /* position related selection  */
 /* :first-child and last-child */
-aside ul li:first-child{
+aside ul li:first-child {
     font-weight: bold;
 }
 
 /* styling a table （折叠）*/
 /* 将所有table的边框从双框折叠成单 */
-table{
+table {
     border-collapse: collapse;
 }
 
 /* :nth-child(even/odd) 选择奇数偶数 */
-tbody tr:nth-child(even){
+tbody tr:nth-child(even) {
     background-color: pink;
 }
 
@@ -165,17 +181,17 @@ tbody tr:nth-child(even){
     where n is 0 1 2 3 4..until unmber of element
 */
 table th:nth-child(n),
-table td:nth-child(n){
+table td:nth-child(n) {
     border: 2px solid #0000ff;
 }
 
 /* 使用nth-child（）的方程式 */
-table td:nth-child(2n+1){
+table td:nth-child(2n+1) {
     /* 
         rgb(0,0,0)
         rgba(0,0,0,.2) a是透明度，0~1（100%）
     */
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0, 0, 0, .2);
 }
 
 /* CSS的执行顺序是从上到下，但更具体的内容优先级更高 */
