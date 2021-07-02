@@ -1,6 +1,10 @@
 body {
     font-family: serif;
     color: rgb(5, 1, 56);
+    /* Adding background image */
+    /* (./文件名)这个是在同级内寻找文件路径。(../)这个是返回上一级的意思，然后在找目标 */
+    background-image: url(../images/white_brick_wall.png);
+
 }
 
 /* font-family=字体 */
@@ -42,7 +46,20 @@ class像是昵称可以多个值 */
 
 /* selecting elements with id value, #是id*/
 #keepfit {
-    background-color: orange;
+    /* 
+        图片位置的表达
+        10px 10px
+        10% 10%
+        left top
+        center center
+    */
+    /* color image repeat position */
+    background: orange url(../images/bread.jpg) no-repeat center center ;
+    /* contain 包含整个图片，cover覆盖全部背景 */
+    background-size: cover;
+    color: white;
+    
+
 }
 
 /* selecting HTML elements with class name  。是class */
