@@ -215,3 +215,14 @@ table td:nth-child(2n+1) {
     margin当前元素与别的元素之间的部分
     margin包含border包含padding包含content
 */
+
+/* 
+    html{
+        box-sizing: border-box;
+    }
+    *,
+    *:before,
+    *:after{
+        box-sizing: inherit;
+    }
+*/
