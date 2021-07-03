@@ -206,3 +206,12 @@ table td:nth-child(2n+1) {
             1000    0100   0010      0001
     用了几个标签或者几个id，几个class，就代表数字是几
 */
+
+
+/* 
+    conten内容可以图像文字
+    padding内容与边框之间的部分
+    border边框
+    margin当前元素与别的元素之间的部分
+    margin包含border包含padding包含content
+*/
