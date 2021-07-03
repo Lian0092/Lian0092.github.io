@@ -44,8 +44,17 @@ nav ul {
     list-style: none;
 }
 
+nav ul li{
+    display: inline-block;
+    width: 32%;
+    /* width 加padding就超过100%了，所以加上box-sizing来自动调节width的量 */
+    padding: 1em;
+    box-sizing: border-box;
+}
+
 /* selecting child elements multiple level */
 nav ul a {
+    display: block;
     color: rgb(5, 1, 56);
     text-decoration: none;
     font-size: 1.5rem;
@@ -82,6 +91,11 @@ class像是昵称可以多个值 */
 
 /* selecting HTML elements with class name  。是class */
 .orange-link {
+    padding: 2em;
+    width: 200px;
+    display: block;
+    /* 清楚float带来的影响 */
+    /* clear: left; */
     background-color: yellow;
     color: black;
     text-decoration: none;
@@ -205,10 +219,20 @@ table td:nth-child(2n+1) {
 }
 
 /* CSS Box Modle */
+/* 赋予single值，双数值，4个single值 */
 section p {
     width: 50%;
     /* top-botton left-right */
     padding: 1em .5em;
+    /* 
+        top-botton left-right
+        margin: -1em 2em; 上下各减1em，左右各加2em。
+        top left botton right
+    */
+    margin: -1em 2em 2em 2em;
+    /* We can use single margin, padding or border by adding -side exmaple border-left padding-right etc. */
+    margin-left: 4em;
+    border-right: 2px solid black;
 }
 
 /* CSS的执行顺序是从上到下，但更具体的内容优先级更高 */
@@ -235,7 +259,7 @@ section p {
 
 
 /* 
-    为所有元素设置 box-sing.
+    为所有元素设置 box-sizing.
     在我们开始我们的 CSS 样式之前，我们可以添加以下代码来为页面上的每个元素设置框大小 
 */
 
