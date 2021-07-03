@@ -9,6 +9,7 @@ body {
 
 .container{
     max-width: 1200px;
+    /* top-botton left-right */
     margin: 0 auto;
 }
 
@@ -201,6 +202,13 @@ table td:nth-child(2n+1) {
         rgba(0,0,0,.2) a是透明度，0~1（100%）
     */
     background-color: rgba(0, 0, 0, .2);
+}
+
+/* CSS Box Modle */
+section p {
+    width: 50%;
+    /* top-botton left-right */
+    padding: 1em .5em;
 }
 
 /* CSS的执行顺序是从上到下，但更具体的内容优先级更高 */
