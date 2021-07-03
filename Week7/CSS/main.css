@@ -7,6 +7,15 @@ body {
 
 }
 
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img{
+    width: 100%;
+}
+
 /* font-family=字体 */
 /* color:=颜色 */
 /* Ctrl+/=注释的快捷式 */
@@ -65,7 +74,7 @@ class像是昵称可以多个值 */
     padding: 1em;
     /* padding 可以将字体从边缘向中间推动 1 em 的距离 */
     /* 1 * 20 =20px */
-    width: 100vw;
+    width: 100%;
     /* 这个width 可以让当前的keepfit的所有内容（背景最明显），跟页面的宽的100%一样大 */
     /* vw 页面宽。 vh页面高，但用%还是更方便 */
 }
@@ -214,6 +223,12 @@ table td:nth-child(2n+1) {
     border边框
     margin当前元素与别的元素之间的部分
     margin包含border包含padding包含content
+*/
+
+
+/* 
+    为所有元素设置 box-sing.
+    在我们开始我们的 CSS 样式之前，我们可以添加以下代码来为页面上的每个元素设置框大小 
 */
 
 /* 
