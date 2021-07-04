@@ -4,6 +4,8 @@ body {
     /* Adding background image */
     /* (./文件名)这个是在同级内寻找文件路径。(../)这个是返回上一级的意思，然后在找目标 */
     background-image: url(../images/white_brick_wall.png);
+    /* 修复fixed nav带来的遮挡 */
+    padding-top: 91px;
 
 }
 
@@ -66,6 +68,7 @@ class像是昵称可以多个值 */
 
 /* selecting elements with id value, #是id*/
 #keepfit {
+    position:relative;
     /* 
         图片位置的表达
         10px 10px
@@ -81,12 +84,19 @@ class像是昵称可以多个值 */
 
     font-size: 1.25rem;
     /* 1.25 * 16 = 20px */
-    padding: 1em;
+    padding: 1em 1em 3em 1em;
     /* padding 可以将字体从边缘向中间推动 1 em 的距离 */
     /* 1 * 20 =20px */
-    width: 100%;
+    width: 50%;
     /* 这个width 可以让当前的keepfit的所有内容（背景最明显），跟页面的宽的100%一样大 */
     /* vw 页面宽。 vh页面高，但用%还是更方便 */
+}
+
+/* 添加position：absolute */
+.orange-link.large-text{
+    position:absolute;
+    bottom: 0;
+    right: 0;
 }
 
 /* selecting HTML elements with class name  。是class */
@@ -94,11 +104,30 @@ class像是昵称可以多个值 */
     padding: 2em;
     width: 200px;
     display: block;
-    /* 清楚float带来的影响 */
+    /* clear fix是消除float对自身border或背景带来的高度副作用 */
+    /* clear是清除其他元素试图进去float带来的空白区域的内容副作用 */
     /* clear: left; */
     background-color: yellow;
     color: black;
     text-decoration: none;
+}
+
+/* exmaple of float */
+article,aside{
+    width: 80%;
+    background-color: rgba(255,255,255,0.6);
+    border: 2px solid black;
+    padding: 1.5em;
+    box-sizing: border-box;
+    float: left;
+}
+
+aside{
+    width: 20%;
+}
+
+section{
+    clear: both;
 }
 
 .large-text {
@@ -153,6 +182,19 @@ h3~p {
 /* $只有结尾符合 */
 img[src$=".jpg"] {
     border: 4px solid red;
+}
+
+/* add fixed navigation固定导航 */
+nav{
+    position: fixed;
+    top: 0;
+    left: 15%;
+    /* 添加width可以恢复元素原有的宽 */
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 添加优先级，数值最高的，覆盖在最上层 */
+    z-index: 20;
+    /* 这样遮挡了最上面的标题，需要去最上面添加padding来修复 */
 }
 
 /* using pseudo classes */
