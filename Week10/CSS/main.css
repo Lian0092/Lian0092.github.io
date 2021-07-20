@@ -1,0 +1,335 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* ---------------------------------
+        custom stylye
+------------------------------------ */
+/* my CSS body */
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* 每一个行的line-height太小。调高 */
+body {
+    line-height: 1.5;
+}
+/*  这个星号就是html的所有元素 */
+*， *：after， *：before {
+    box-sizing: inherit;
+    line-height: inherit;
+}
+
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+img {
+    width: 100%;
+}
+
+/* 
+    上面的content style
+    一个是设计整个html的规格，
+    一个是设计所有body内容的行高
+    一个是将所有元素都应用这个box-sizing和行高
+    claerfix 提前写好修复程序或者浮空程序，后面用的时候在去html找到对应的元素,加一个新的class=clearfix.
+    图像设置，提前将所有图像设置成100%的大小，不会太大也不会太小
+*/
+
+/* LoVe HAte */
+/* 这是个缩写，L link, V visited */
+/* a 一般链接。a:link 有效链接。 a:visited 已访问过的链接*/
+a,
+a:link,
+a:visited {
+    /* inherit 代表继承父的内容 */
+    color: inherit;
+}
+
+/* 悬停和焦点，鼠标选用 or 键盘选用  的状态*/
+a:hover,
+a:focus {
+    color: #00ADD8;
+}
+
+/* 设置所有标题 */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: bold;
+    /* top left-right bottom */
+    margin: 1em 0 0.5em;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+h2{
+    font-size: 3.375rem;
+
+}
+
+h3{
+    font-size: 2.25rem;
+}
+
+h4{
+    font-size: 1.5rem;
+}
+
+h5{
+    font-size: 1rem;
+}
+
+/* change p */
+p{
+    /* top bottom, left right */
+    margin: 1em 0;
+}
+/* 上面的所有是在重置CSS之后需要做的，页面基础风格设置 */
+
+/* ----------------------------------- */
+
+/* 进入mobile sytle正题 */
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+/* header */
+/* 处理小屏幕的图片 */
+.mobile-logo{
+    max-width: 150px;
+}
+
+.desktop-logo{
+    display:none;
+}
+
+.banner{
+    height: 600px;
+    /* 在css添加背景图片 */
+    background: grey url("../images/mobile-banner.jpg") no-repeat center bottom;
+    background-size:cover;
+}
+
+/* 消除背景和上面图片中多余的空隙 */
+/* 调整标题在图片中的位置到中心点,并全部大写 */
+.banner h1{
+    margin:0;
+    padding-top: 250px;
+    /* text-align; 可以改变位置 */
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* 制作一个mobile app 按钮 */
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.btn:hover,
+.btn:focus{
+    background-color: #00add8;
+    /* 用inherit防止文本颜色跟着背景颜色一起改变 */
+    /* 用了inherit文本颜色继续跟随父辈,不会在这里被改变 */
+    color:inherit;
+}
+
+/* 加一个分界线,通过边框top 或bottom */
+.site-footer{
+    margin-top: 20px;
+    padding: 20px 0;
+    border-top: 2px solid #00add8;
+}
+
+.copy{
+    text-align:right;
+}
+
+/* ------------------------------
+    change to desktop styles
+--------------------------------- */
+/* 制作600px开始变化 */
+@media screen and (min-width: 600px) {
+    /* media内部也要遵循css的基本顺序,这样不若那个易出错 */
+    html{
+        font-size: 16px;
+
+    }
+    .mobile-logo{
+        display: none;
+    }
+
+    .desktop-logo{
+        /* 因为之前none,现在恢复只需要定义任意值即可 */
+        display: inline-block;
+        /* 因为太大了,所以设置最大值 */
+        max-width: 300px;
+    }
+    .banner{
+        /* 因为不需要改变别的,直接用"背景图片"来改变  */
+        background-image: url("../images/desktop-banner.jpg");
+    }
+    .banner h1{
+        color: white;
+    }
+
+    /* app section */
+    .app img{
+        width: 40%;
+        float: left;
+        margin-right: 1em;
+    }
+
+    .app .btn{
+        float: right;
+    }
+}
