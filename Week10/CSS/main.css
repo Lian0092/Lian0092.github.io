@@ -380,6 +380,9 @@ p{
         border: none;
         border-right: 1px solid grey;
     }
+    .nav-list li:last-child{
+        border:none;
+    }
 
     /* app section */
     .app img{
@@ -390,5 +393,14 @@ p{
 
     .app .btn{
         float: right;
+    }
+}
+/* 
+    ------------------------
+*/
+/* add 800px的屏幕 */
+@media screen and (min-width: 800px){
+    .actions-list li {
+        max-width: 15%;
     }
 }
