@@ -150,6 +150,7 @@ html {
 body {
     line-height: 1.5;
 }
+
 /*  这个星号就是html的所有元素 */
 *， *：after， *：before {
     box-sizing: inherit;
@@ -202,38 +203,39 @@ h5 {
     margin: 1em 0 0.5em;
 }
 
-h1{
+h1 {
     font-size: 5rem;
 }
 
-h2{
+h2 {
     font-size: 3.375rem;
 
 }
 
-h3{
+h3 {
     font-size: 2.25rem;
 }
 
-h4{
+h4 {
     font-size: 1.5rem;
 }
 
-h5{
+h5 {
     font-size: 1rem;
 }
 
 /* change p */
-p{
+p {
     /* top bottom, left right */
     margin: 1em 0;
 }
+
 /* 上面的所有是在重置CSS之后需要做的，页面基础风格设置 */
 
 /* ----------------------------------- */
 
 /* 进入mobile sytle正题 */
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1em;
@@ -241,25 +243,25 @@ p{
 
 /* header */
 /* 处理小屏幕的图片 */
-.mobile-logo{
+.mobile-logo {
     max-width: 150px;
 }
 
-.desktop-logo{
-    display:none;
+.desktop-logo {
+    display: none;
 }
 
-.banner{
+.banner {
     height: 600px;
     /* 在css添加背景图片 */
     background: grey url("../images/mobile-banner.jpg") no-repeat center bottom;
-    background-size:cover;
+    background-size: cover;
 }
 
 /* 消除背景和上面图片中多余的空隙 */
 /* 调整标题在图片中的位置到中心点,并全部大写 */
-.banner h1{
-    margin:0;
+.banner h1 {
+    margin: 0;
     padding-top: 250px;
     /* text-align; 可以改变位置 */
     text-align: center;
@@ -268,7 +270,7 @@ p{
 
 
 /* Navigation nav导航链接 */
-.nav-list li{
+.nav-list li {
     border-bottom: 1px solid grey;
     text-align: center;
     /* 
@@ -285,7 +287,7 @@ p{
 /* 如果不遵守，可能会发生未知的错误，所以是love hate */
 .nav-list a,
 .nav-list a:link,
-.nav-list a:visited{
+.nav-list a:visited {
     display: block;
     padding: 1em 0;
     text-decoration: none;
@@ -294,13 +296,13 @@ p{
 /* 制作悬停和焦点  */
 .nav-list a:hover,
 .nav-list a:focus,
-.nav-list a.current{
+.nav-list a.current {
     background-color: #00add8;
-    color:inherit; 
+    color: inherit;
 }
 
 /* 制作一个mobile app 按钮 */
-.btn{
+.btn {
     text-decoration: none;
     display: inline-block;
     border: 1px solid grey;
@@ -309,18 +311,18 @@ p{
 }
 
 .btn:hover,
-.btn:focus{
+.btn:focus {
     background-color: #00add8;
     /* 用inherit防止文本颜色跟着背景颜色一起改变 */
     /* 用了inherit文本颜色继续跟随父辈,不会在这里被改变 */
-    color:inherit;
+    color: inherit;
 }
 
 /* Actions Section */
 /* flex只能影响到一代子嗣，所以选择无序列表，li的爹ul */
-.actions-list{
-    display:flex;
-    flex-flow:row wrap;
+.actions-list {
+    display: flex;
+    flex-flow: row wrap;
 }
 
 /* 因为设置后flex图片就按照100%的占据整个屏幕，所以让图片变小 */
@@ -333,14 +335,14 @@ p{
 
 /* 加一个分界线,通过边框top 或bottom */
 /* footer */
-.site-footer{
+.site-footer {
     margin-top: 20px;
     padding: 20px 0;
     border-top: 2px solid #00add8;
 }
 
-.copy{
-    text-align:right;
+.copy {
+    text-align: right;
 }
 
 /* ------------------------------
@@ -348,58 +350,65 @@ p{
 --------------------------------- */
 /* 制作600px开始变化 */
 @media screen and (min-width: 600px) {
+
     /* media内部也要遵循css的基本顺序,这样不若那个易出错 */
-    html{
+    html {
         font-size: 16px;
 
     }
-    .mobile-logo{
+
+    .mobile-logo {
         display: none;
     }
 
-    .desktop-logo{
+    .desktop-logo {
         /* 因为之前none,现在恢复只需要定义任意值即可 */
         display: inline-block;
         /* 因为太大了,所以设置最大值 */
         max-width: 300px;
     }
-    .banner{
+
+    .banner {
         /* 因为不需要改变别的,直接用"背景图片"来改变  */
         background-image: url("../images/desktop-banner.jpg");
     }
-    .banner h1{
+
+    .banner h1 {
         color: white;
     }
 
     /* 导航navigation */
-    .nav-list{
-        display:flex;
-    } 
-    .nav-list li{
+    .nav-list {
+        display: flex;
+    }
+
+    .nav-list li {
         flex: 1;
         border: none;
         border-right: 1px solid grey;
     }
-    .nav-list li:last-child{
-        border:none;
+
+    .nav-list li:last-child {
+        border: none;
     }
 
     /* app section */
-    .app img{
+    .app img {
         width: 40%;
         float: left;
         margin-right: 1em;
     }
 
-    .app .btn{
+    .app .btn {
         float: right;
     }
 }
+
 /* 
     ------------------------
 */
 /* add 800px的屏幕 */
-@media screen and (min-width: 800px){
+@media screen and (min-width: 800px) {
     .actions-list li {
         max-width: 15%;
     }
