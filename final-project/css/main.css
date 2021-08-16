@@ -1,0 +1,424 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------------------------------------
+        My CSS  Style
+--------------------------------------*/
+
+/* Basic page style settings */
+html {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	box-sizing: border-box;
+}
+
+body {
+	line-height: 1.5;
+}
+
+*， *：after， *：before {
+	box-sizing: inherit;
+	line-height: inherit;
+}
+
+.clearfix::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+img {
+	width: 100%;
+}
+
+a,
+a:link,
+a:visited {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+a:hover,
+a:focus {
+	color: #222;
+	background-color: #c78c06;
+}
+/* change Icon Font color */
+.im-play{
+	color: white;
+	display: inline-block;
+	padding-left: 1em;
+}
+
+/* change a font size */
+a{
+	font-size: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: bold;
+	/* top left-right bottom */
+	margin: 1em 0 0.5em;
+}
+
+h1 {
+	font-size: 4.5rem;
+}
+
+h2 {
+	font-size: 3.375rem;
+
+}
+
+h3 {
+	font-size: 2.75rem;
+}
+
+h4 {
+	font-size: 2rem;
+}
+
+h5 {
+	font-size: 1.5rem;
+}
+
+p {
+	/* top bottom, left right */
+	margin: 1em 0;
+}
+/* Basic style settings */
+
+/* ------------------------
+	Starting my CSS
+--------------------------*/
+
+.container {
+    margin: 0 auto;
+    padding: 1em;
+}
+
+
+/* add header nav */
+.nav-part ul li a{
+	color: #c78c06;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 1em;
+}
+
+.nav-part ul li a:hover,
+.nav-part ul li a:focus {
+	color: #222;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+/* add grid to nav */
+.nav-part{
+	background-color: #222;
+	display: grid;
+	grid-template-columns:repeat(1,1fr);
+	grid-template-rows:repeat(7, auto);
+}
+
+.nav-part ul li img{
+	width: 20%;
+	padding: 2em;
+	margin: 0.5em;
+	margin-bottom: 0;
+	background-color:#c78c06;
+}
+/* setting grid of form */
+.nav-part ul li form{
+	display: block;
+	margin: 0.5em;
+}
+.nav-part ul li form input{
+	min-width: 90%;
+	padding: 0.5em;
+	padding-right: 0;
+	margin-right: 0;
+}
+.nav-part ul li form button{
+	padding: 0;
+	margin: 0;
+}
+.im-magnifier,
+.im-magnifier:before{
+	color: #c78c06;
+	background-color: #222;
+	margin: 0;
+}
+/* adding banner part */
+.banner{
+	background: url(../images/main-banner.jpg) no-repeat center bottom;
+	background-size: cover;
+	padding: 3em;
+	padding-left: 0;
+	padding-right: 0;
+}
+/* adding grey background color */
+.banner div{
+	background-color: rgba(0, 0, 0, 0.5);
+}
+/* change text color */
+.banner h1,
+.banner p,
+.banner a{
+	color: white;
+	margin: 10px;
+}
+
+.banner h1{
+	padding-top: 0.5em;
+}
+/* add border to a */
+.banner a{
+	display: inline-block;
+	color: black;
+	border: 1px solid black;
+	background-color: #c78c06;
+	padding: 1.5em;
+	margin-top: 0;
+}
+/* change setting of banner Icon Font */
+.banner .im-play{
+	display: inline-block;
+	color: black;
+	padding-left: 1em;
+}
+
+/* add About us part */
+#about{
+	background-color: #ffe6ac;
+	padding: 0.5em;
+}
+
+/* Our Services part */
+.field{
+	background-color: #ffe6ac;
+	margin: 0.5em;
+}
+
+/* adding padding to texts */
+.field h4,
+.field p,
+.field a {
+	padding: 0.5em;
+}
+
+/* adding services a */
+.field a {
+	display: inline-block;
+	color:white;
+	background-color: #222;
+	padding: 1.5em;
+	margin: 0.5em;
+}
+
+/* add Our Vision section */
+.vision{
+	background: url(../images/vision.jpg)no-repeat center bottom;
+	background-size:cover;
+	color: white;
+	padding: 0.5em;
+}
+.vision a{
+	display: inline-block;
+	background-color: #222;
+	padding: 1.5em;
+	margin: 0.5em;
+	border: 1px solid #c78c06;
+}
+
+/* add our team part */
+.doe,
+.rite{
+	background-color: #ffe6ac;
+	margin-top: 0;
+}
+/* add padding at team's text */
+.textsinfo{
+	padding: 0.5rem;
+}
+/* change hr's color */
+.textsinfo hr{
+	border: 1px solid #c78c06;
+}
+
+
+/* adding Contact us section */
+.message form input,
+.message form textarea{
+	display: block;
+	width: 100%;
+	margin-bottom: 0.5em;
+}
+/* add button style */
+.message button{
+	color: #c78c06;
+	background-color: #222;
+	font-size: 1.5rem;
+}
+
+/* add operation part style */
+.operation thead tr th,
+.operation tbody tr td {
+	border: 2px solid #222;
+	padding: 0.5rem;
+	width: 10%;
+}
+.operation thead{
+	background-color: #ffe6ac;
+}
+caption{
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+/* adding footer style */
+footer{
+	color: #c78c06;
+	background-color: #222;
+}
+footer a{
+	font-size: 1rem;
+}
