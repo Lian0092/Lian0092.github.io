@@ -134,13 +134,13 @@ table {
 	border-spacing: 0;
 }
 
-/* ------------------------------------
+/* -----------------------------------------------------------------
         My CSS  Style
---------------------------------------*/
+-------------------------------------------------------------------*/
 
 /* Basic page style settings */
 html {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family:'Open Sans', sans-serif;;
 	font-size: 14px;
 	box-sizing: border-box;
 }
@@ -148,12 +148,6 @@ html {
 body {
 	line-height: 1.5;
 }
-
-*， *：after， *：before {
-	box-sizing: inherit;
-	line-height: inherit;
-}
-
 .clearfix::after {
 	content: '';
 	display: table;
@@ -226,13 +220,14 @@ p {
 }
 /* Basic style settings */
 
-/* ------------------------
+/* ------------------------------------------------------------------------
 	Starting my CSS
---------------------------*/
+--------------------------------------------------------------------------*/
 
 .container {
     margin: 0 auto;
     padding: 1em;
+	min-width: 500px;
 }
 
 
@@ -418,7 +413,165 @@ caption{
 footer{
 	color: #c78c06;
 	background-color: #222;
+	padding: 2em;
+	margin: 1em 0;
 }
 footer a{
 	font-size: 1rem;
+}
+footer ul li{
+	padding-top:1em;
+}
+
+/* ------------------------------------------------------------------------------
+		add media screen 760px
+		starting desktop styles
+--------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 760px) {
+	/* change the max-width of page */
+	.container{
+		max-width: 1200px;
+	}
+	/* change header img size */
+	.nav-part ul li img{
+		min-width: 60px;
+		width: 50%;
+		margin: 1.5em 0 1.5em 5em;
+		padding: 0;
+	}
+	/* starting nav-part grid part */
+	.nav-part ul li {
+		display: inline-block;
+	}
+	/* change size of text */
+	.nav-part ul li a{
+		margin: 1.5em 0 0 0;
+		font-size: 1.45rem;
+	}
+	/* add grid template */
+	.nav-part ul{
+		display: grid;
+		grid-template-columns:repeat(7,1fr);
+	}
+	.nav-part ul li a:hover,
+	.nav-part ul li a:focus {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	/* change form size */
+	.nav-part ul li form{
+		margin-right: 5em;
+		/* width: 50%; */
+	}
+	.nav-part ul li form input{
+		min-width: 100%;
+		width: 200px;
+	}
+	.nav-part ul li form div{
+		width: 100%;
+		display: grid;
+		grid-template-columns:repeat(1,75% 23%);
+	}
+	.nav-part ul li form div button{
+		border: none;
+		background-color: white;
+	}
+
+	/* Banner style change */
+	.banner{
+		padding-left: 4em;
+		padding-right: 4em;
+	}
+
+	/* add About Us section */
+	#about{
+		padding: 1em 4em 1em 4em;
+		display: flex;
+	}
+	#about img{
+		width: 50%;
+	}
+	/* Change the text padding of About Us */
+	#about div{
+		padding-left: 1em;
+	}
+
+	/* Add Our Services section grid */
+	.field-grid{
+		display:grid;
+		grid-template-columns:repeat(6,1fr);
+		grid-template-rows:repeat(2,auto);
+		grid-template-areas: 
+		"main1 main1 main1 main2 main2 main2"
+		"main3 main3 main4 main4 main5 main5"
+		;
+	}
+	.field-1{
+		grid-area: main1;
+	}
+	.field-2{
+		grid-area: main2;
+	}
+	.field-3{
+		grid-area: main3;
+	}
+	.field-4{
+		grid-area: main4;
+	}
+	.field-5{
+		grid-area: main5;
+	}
+	.field a{
+		display: block;
+	}
+	#services{
+		padding: 1em 4em 1em 4em;
+	}
+
+	/* Our Vision */
+	.vision{
+		padding: 1em 4em 1em 4em;
+	}
+
+	/* Our Team */
+	#team{
+		padding: 1em 4em 1em 4em;
+	}
+	.doe{
+		display: flex;
+	}
+	.rite{
+		display: flex;
+	}
+	.doe img{
+		width: 50%;
+	}
+	.rite img{
+		order: 1;
+		width: 50%;
+	}
+
+	/* add grid of Contact Us */
+	#contact{
+		padding: 1em 4em 1em 4em;
+	}
+	.contact-grid{
+		display: grid;
+		grid-template-columns:repeat(2,1fr);
+		grid-template-rows: repeat(2,auto);
+		grid-template-areas: 
+		"main1 main2"
+		"main3 main3"
+		;
+	}
+	.contact-grid .message{
+		grid-area: main1;
+	}
+	.contact-grid .operation{
+		grid-area: main3;
+	}
+	.contact-grid .google-map{
+		grid-area: main2;
+	}
 }

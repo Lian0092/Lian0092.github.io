@@ -8,6 +8,10 @@
     <title>Theree Star Media</title>
     <!-- Icon Font Link -->
     <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css">
+    <!-- Google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
     <!-- Custom styles -->
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -29,8 +33,10 @@
                     <li>
                         <form action="thanks.html" method="get">
                             <label for="search"></label>
-                            <input id="search" type="text" name="search" placeholder="Search">
-                            <button type="submit"><i class="im im-magnifier"></i></button>
+                            <div>
+                                <input id="search" type="text" name="search" placeholder="Search">
+                                <button type="submit"><i class="im im-magnifier"></i></button>
+                            </div>
                         </form>
                     </li>
                 </ul>
@@ -52,63 +58,82 @@
             <!-- add about section -->
             <div id="about">
                 <img src="images/about-us.jpg" alt="image of about-us">
-                <h3>About Us</h3>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book.
-                </p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took.</p>
+                <div>
+                    <h3>About Us</h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and scrambled it to make a type specimen book.
+                    </p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took.
+                    </p>
+                </div>
             </div>
             <!-- adds services section -->
             <section id="services">
                 <h3>Our Services</h3>
                 <!-- adds 5 blocks parts -->
                 <!-- adds field-1 -->
-                <div class="field field-1">
-                    <img src="images/digital.jpg" alt="image of digital">
-                    <h4>Digital Transformation</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book.</p>
-                    <a href="digital.html" target="_blank">Digital Plans<i class="im im-play"></i></a>
-                </div>
-                <!-- adds field-2 -->
-                <div class="field field-2">
-                    <img src="images/marketing.jpg" alt="image of marketing">
-                    <h4>Marketing</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book.</p>
-                    <a href="marketing.html" target="_blank">Marketing Plans<i class="im im-play"></i></a>
-                </div>
-                <!-- adds field-3 -->
-                <div class="field field-3">
-                    <img src="images/video.jpg" alt="image of video">
-                    <h4>Video Production</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book.</p>
-                    <a href="vidio.html" target="_blank">Video Plans<i class="im im-play"></i></a>
-                </div>
-                <!-- adds field-4 -->
-                <div class="field field-4">
-                    <img src="images/web.jpg" alt="image of web">
-                    <h4>Web Development</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book.</p>
-                    <a href="web.html" target="_blank">Web Plans<i class="im im-play"></i></a>
-                </div>
-                <!-- adds field-5 -->
-                <div class="field field-5">
-                    <img src="images/print.jpg" alt="image of print">
-                    <h4>Print</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book.</p>
-                    <a href="print.html" target="_blank">Print Plans<i class="im im-play"></i></a>
+                <div class="field-grid">
+                    <div class="field field-1">
+                        <img src="images/digital.jpg" alt="image of digital">
+                        <h4>Digital Transformation</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book.</p>
+                        <a href="digital.html" target="_blank">Digital Plans<i class="im im-play"></i></a>
+                    </div>
+                    <!-- adds field-2 -->
+                    <div class="field field-2">
+                        <img src="images/marketing.jpg" alt="image of marketing">
+                        <h4>Marketing</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book.</p>
+                        <a href="marketing.html" target="_blank">Marketing Plans<i class="im im-play"></i></a>
+                    </div>
+                    <!-- adds field-3 -->
+                    <div class="field field-3">
+                        <img src="images/video.jpg" alt="image of video">
+                        <h4>Video Production</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book.</p>
+                        <a href="vidio.html" target="_blank">Video Plans<i class="im im-play"></i></a>
+                    </div>
+                    <!-- adds field-4 -->
+                    <div class="field field-4">
+                        <img src="images/web.jpg" alt="image of web">
+                        <h4>Web Development</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book.</p>
+                        <a href="web.html" target="_blank">Web Plans<i class="im im-play"></i></a>
+                    </div>
+                    <!-- adds field-5 -->
+                    <div class="field field-5">
+                        <img src="images/print.jpg" alt="image of print">
+                        <h4>Print</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book.</p>
+                        <a href="print.html" target="_blank">Print Plans<i class="im im-play"></i></a>
+                    </div>
                 </div>
             </section>
             <!-- adds Our Vision section -->
@@ -154,52 +179,54 @@
             <section id="contact">
                 <h3>Contact Us</h3>
                 <!-- adds message form tag -->
-                <div class="message">
-                    <h4>Send us a message</h4>
-                    <form action="thanks.html" method="POST">
-                        <div>
-                            <label for="fullname">Full Name</label>
-                            <input type="text" id="fullname" name="fullname">
-                        </div>
-                        <div>
-                            <label for="youremail">Email</label>
-                            <input type="email" id="youremail" name="youremail">
-                        </div>
-                        <div>
-                            <label for="yourmassege">Massage</label>
-                            <textarea name="yourmassege" id="yourmassege" cols="30" rows="10"></textarea>
-                        </div>
-                        <button type="submit">Send</button>
-                    </form>
-                </div>
-                <!-- adds Hours of operation table -->
-                <div class="operation">
-                    <table>
-                        <caption>Hours of operation</caption>
-                        <thead>
-                            <tr>
-                                <th>Days</th>
-                                <th>Hours</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Monday-Friday</td>
-                                <td>9 AM - 6 PM</td>
-                            </tr>
-                            <tr>
-                                <td>Saturday-Sunday</td>
-                                <td>Closed</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- adds a small google map -->
-                <div class="google-map">
-                    <h4>Location</h4>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2290.737781663437!2d-75.75623527822472!3d45.34910135110175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4e8b1cef296bbd38!2sAlgonquin%20College%20-%20Building%20B!5e0!3m2!1sen!2sus!4v1627896788405!5m2!1sen!2sus"
-                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="contact-grid">
+                    <div class="message">
+                        <h4>Send us a message</h4>
+                        <form action="thanks.html" method="POST">
+                            <div>
+                                <label for="fullname">Full Name</label>
+                                <input type="text" id="fullname" name="fullname">
+                            </div>
+                            <div>
+                                <label for="youremail">Email</label>
+                                <input type="email" id="youremail" name="youremail">
+                            </div>
+                            <div>
+                                <label for="yourmassege">Massage</label>
+                                <textarea name="yourmassege" id="yourmassege" cols="30" rows="10"></textarea>
+                            </div>
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+                    <!-- adds Hours of operation table -->
+                    <div class="operation">
+                        <table>
+                            <caption>Hours of operation</caption>
+                            <thead>
+                                <tr>
+                                    <th>Days</th>
+                                    <th>Hours</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monday-Friday</td>
+                                    <td>9 AM - 6 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday-Sunday</td>
+                                    <td>Closed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- adds a small google map -->
+                    <div class="google-map">
+                        <h4>Location</h4>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2290.737781663437!2d-75.75623527822472!3d45.34910135110175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4e8b1cef296bbd38!2sAlgonquin%20College%20-%20Building%20B!5e0!3m2!1sen!2sus!4v1627896788405!5m2!1sen!2sus"
+                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
                 </div>
 
             </section>
